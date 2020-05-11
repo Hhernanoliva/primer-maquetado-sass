@@ -1,0 +1,11 @@
+@import './abstract/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap');
+@import './components/nav.scss';
+body {
+    margin: 50px;
+    background-color: $violeta;
+    height: calc(100vh - 50px);
+    & a:link, a:visited, a:active {
+    text-decoration:none;
+    color: $blanco; }
+}

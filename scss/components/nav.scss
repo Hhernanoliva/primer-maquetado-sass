@@ -1,0 +1,60 @@
+@import '../abstract/mixin.scss';
+@import '../abstract/variables.scss';
+
+nav {
+    @include flex(center,center,nowrap,column);    
+    background-color: $rosa;
+    width: 400px;
+    box-sizing: border-box;
+    color: $blanco;
+    border-radius: 10px 0 0 10px;
+    & .header-nav {
+        display: inline-flex;
+        margin-top: 70px;
+        @include font-bold;
+        & .titulo-header {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-size: $medium;
+            & h3 {
+                margin: 0;
+                margin-bottom: 10px;;
+            }
+            & a {
+                @include button-settings;
+            }
+        }
+        & img {
+            border-radius: 50%;
+            width: auto;
+            height: 100px;
+            margin-right: 23px;
+        }
+    }
+    & .menu-nav {
+        @include style-button-nav;
+        margin-top: 95px; 
+        margin-bottom: 100px;
+             
+        & a{
+            color: $gris !important;
+            @include button-settings; 
+            font-size: $large; 
+            margin-top: 25px;
+            & :nth-child(1) {
+                vertical-align: middle;
+                width: 30px;
+                font-size: 30px;
+            }
+        }
+        & span {
+            margin-left: 20px;
+            vertical-align: middle;
+            font-size: $small;
+        }
+        & :nth-child(5) {
+            margin-top: 140px;
+        }
+    }
+}
